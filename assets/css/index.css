@@ -1,0 +1,40 @@
+/* 
+*{
+	margin: 0px;
+	padding: 0px;
+}
+*/
+
+body{
+	margin-top: 50px;
+	background-color: #eee;
+}
+img{
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	border: 0;
+}
+
+.navbar-header>a{
+	width: 110px;
+    margin: 5px 40px 0 0;
+    padding: 0px;
+}
+.navbar-inverse .navbar-brand{
+	color: #ffffff;
+}
+.navbar-inverse{
+	background-color:#209e85;
+	border-color:#eee;
+}
+
+.navbar-nav>li>a{
+	font-size: 20px;
+	height: 24px;
+	line-height: 24px;
+}
+.navbar-inverse .navbar-nav>.active>a{
+	background-color:#209e85!important;
+	color: #ffffff;
+}

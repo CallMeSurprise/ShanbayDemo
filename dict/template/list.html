@@ -1,0 +1,8 @@
+{% load staticfiles %}
+<h2>今日目标单词：</h2>
+<a href={{ des }}>开始学习！</a>
+{% for dict in dictList %}
+    <h2>{{ dict.word }}</h2>
+    <p>{{ dict.explanation |linebreaks }}</p>
+    <p>{{ dict.sentences |linebreaks }}</p>
+{% endfor %}

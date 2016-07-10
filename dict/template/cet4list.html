@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<body>
+<h2>今日目标单词：</h2>
+<a href={{ des }}>开始学习！</a>
+{#<script type="text/javascript">#}
+{#    setTimeout(window.location.href ={{ des }}, 5);#}
+{#</script>#}
+
+{% for dict in dictList %}
+    <h2>{{ dict.word }}</h2>
+    <p>{{ dict.explanation |linebreaks }}</p>
+    <p>{{ dict.sentences |linebreaks }}</p>
+{% endfor %}
+
+<script type="text/javascript">
+    setTimeout("alert('请点击上方的\"开始学习！\"链接开始背诵单词吧')", 3000);
+</script>
+</body>

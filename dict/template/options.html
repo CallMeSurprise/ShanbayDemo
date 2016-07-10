@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>扇贝网，我的选择！</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        .tab-content a {
+            cursor: pointer;
+        }
+
+        .text-center img {
+            width: 150px;
+            height: 50px;
+            margin-top: 50px;
+        }
+
+        .mynav {
+            max-width: 550px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+
+        .form-control {
+            position: relative;
+            height: auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .tab-content img {
+            width: 550px;
+            height: 260px;
+        }
+
+        .tab-content {
+            margin-right: 274px;
+        }
+
+        .nav {
+            margin-left: 87px;
+        }
+
+        .mynav li {
+            color: #000;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <img src="/static/images/shanbei.png" height="100">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            {#            <a href="#home" class="active" aria-controls="home" role="tab" data-toggle="tab">四级</a>#}
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation"><a href="#home" class="active" aria-controls="home" role="tab"
+                                           data-toggle="tab">四级</a>
+                </li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">六级</a>
+                </li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+                                           data-toggle="tab">GRE</a>
+                </li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">托福</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {#    <div class="row">#}
+    {#        <form action="/cet4/dailylist/" method="post">#}
+    {#            {% csrf_token %}#}
+    {#            <div class="col-sm-4 col-sm-offset-3">#}
+    {#                <input type="hidden">#}
+    {#                <textarea rows="2" name="num" placeholder="今天要学多少单词呢"></textarea>#}
+    {#            </div>#}
+    {#            <div class="col-sm-4 col-sm-offset-3">#}
+    {#                <button class="btn" type="submit" style="text-align: center">开始学习吧</button>#}
+    {#            </div>#}
+    {#        </form>#}
+    {#    </div>#}
+    <div class="row">
+        <!-- Tab panes -->
+        <div class="tab-content col-sm-4 col-sm-offset-3">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="row">
+                    <form action="/cet4/dailylist/" method="post">
+                        {% csrf_token %}
+                        <div class="col-sm-4 col-sm-offset-3">
+                            <input type="hidden">
+                            <textarea rows="2" name="num" placeholder="今天要学多少单词呢"></textarea>
+                        </div>
+                        <div class="col-sm-4 col-sm-offset-3">
+                            <button class="btn" type="submit" style="text-align: center">开始学习吧</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile"><a href="/cet6/list"><img src="/static/images/CET6.png"></a>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="messages"><a href="/user/options"><img src="/static/images/GRE.jpg"></a>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="settings"><a href="/user/options"><img
+                    src="/static/images/TOFEL.jpg"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扇贝网，我的注册！</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/signin.css"/>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url("/static/images/sbbj.jpg") no-repeat;
+            background-size: 100%;
+            margin: 0 auto;
+            padding: 0px;
+        }
+
+        .mylogin {
+            margin: 150px 500px;
+        {#            border: solid 1px darkgray;#} height: 300px;
+            width: 300px;
+            padding-top: 30px;
+        }
+
+        #mybtn {
+            margin-top: 50px;
+            width: 300px;
+        }
+
+        .form-group {
+            width: 200px;
+            margin-left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+<form class="form-signin" enctype="multipart/form-data" method="post" id="login-form">
+    {% csrf_token %}
+    <div class="form-row">
+        <label class="required" for="id_username">用户名</label>
+        <input type="text" class="form-control" id="id_username" name="username" placeholder="UserName">
+    </div>
+    <div class="form-row">
+        <label class="required" for="id_password">密码</label>
+        <input type="password" class="form-control" id="id_password" name="password" type="password"
+               placeholder="Password"/>
+        {#        <input type="hidden" name="next" value="/user/options/"/>#}
+    </div>
+    <div class="submit-row" id="mybtn">
+        <label>&nbsp;</label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+        <!--成功登录跳转至新页面-->
+    </div>
+    <script type="text/javascript">
+        document.getElementById('id_username').focus()
+    </script>
+</form>
+<br class="clear"/>
+{#<a href="http://127.0.0.1:8000/">欢迎</a>#}
+
+<script src="/static/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>
